@@ -34,7 +34,7 @@ describe('Testing the logger', () => {
 
     const searchOptions: LogSearchConfig = {
       module: LogModules.PushNotifier,
-      //level: LogLevel.ERROR,
+      level: LogLevel.ERROR,
       startTime: '2022-10-03T07:01:46.037Z',
       endTime: '2022-12-03T07:01:46.037Z',
       limit: 1,

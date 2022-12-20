@@ -1,9 +1,36 @@
 {
   "name": "dynamodb-logger",
   "version": "1.0.0-alpha.1.1.0",
-  "description": "A simple logger that logs to DynamoDB",
+  "description": "A DynamoDB wrapper which logs all the entries to the table and an easy way to query the logs",
   "main": "dist/lib.js",
   "typings": "dist/lib.d.ts",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vimson/dynamodb-logger.git"
+  },
+  "author": "Vimson Varghese <vimson@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "npm",
+    "javascript",
+    "typescript",
+    "nodejs",
+    "DynamoDB",
+    "logger",
+    "Easy Scanner"
+  ],
+  "bugs": {
+    "url": "https://github.com/vimson/dynamodb-logger.git/issues"
+  },
+  "homepage": "https://github.com/vimson/dynamodb-logger.git",
   "scripts": {
     "start-dev": "concurrently \"tsc --watch\" \"TS_NODE_BASEURL=./dist nodemon -r tsconfig-paths/register dist/server.js\"",
     "start-prod": "TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/server.js",
@@ -38,9 +65,6 @@
     "tsconfig-paths": "4.1.0",
     "typescript": "4.8.3"
   },
-  "keywords": [],
-  "author": "Vimson Varghese <vimson@gmail.com>",
-  "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-dynamodb": "3.188.0",
     "@aws-sdk/util-dynamodb": "3.188.0",
